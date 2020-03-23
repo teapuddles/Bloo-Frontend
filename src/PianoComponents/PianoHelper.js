@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Piano, KeyboardShortcuts, MidiNumbers } from 'react-piano';
 import 'react-piano/dist/styles.css';
 
@@ -17,7 +16,7 @@ const noteRange = {
 };
 
 export default class PianoHelper extends React.Component {
-  render(props){
+  render(){
     return (
       <DimensionsProvider>
         {({ containerWidth, containerHeight }) => (
@@ -32,7 +31,6 @@ export default class PianoHelper extends React.Component {
                 playNote={playNote}
                 stopNote={stopNote}
                 disabled={isLoading}
-                {...props}
               />
             )}
           />
