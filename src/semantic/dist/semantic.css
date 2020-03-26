@@ -46,6 +46,9 @@ input[type="password"] {
   /* mobile firefox too! */
 }
 
+.container {
+  font-size: large;
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -230,6 +233,7 @@ textarea {
   line-height: 1.15;
   /* 1 */
   margin: 0;
+  background: #CAE7D4;
   /* 2 */
 }
 
@@ -495,7 +499,10 @@ h2 {
 }
 
 h3 {
-  font-size: 1.28571429rem;
+  font-size: large;
+  font-family: 'Fugaz One', cursive;
+  margin-right: 150px;
+  margin-left: 150px;
 }
 
 h4 {
@@ -662,7 +669,7 @@ body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:hover {
   outline: none;
   border: none;
   vertical-align: baseline;
-  background: #E0E1E2 none;
+  background: #CAE7D4 none;
   color: rgba(0, 0, 0, 0.6);
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0 0.25em 0 0;
@@ -694,7 +701,7 @@ body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:hover {
 ---------------*/
 
 .ui.button:hover {
-  background-color: #CACBCD;
+  background-color: #CAE7D4;
   background-image: none;
   box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
   color: rgba(0, 0, 0, 0.8);
@@ -709,7 +716,7 @@ body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:hover {
 ---------------*/
 
 .ui.button:focus {
-  background-color: #CACBCD;
+  background-color: #CAE7D4;
   color: rgba(0, 0, 0, 0.8);
   background-image: none;
   box-shadow: '';
@@ -725,7 +732,7 @@ body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:hover {
 
 .ui.button:active,
 .ui.active.button:active {
-  background-color: #BABBBC;
+  background-color: #CAE7D4;
   background-image: '';
   color: rgba(0, 0, 0, 0.9);
   box-shadow: 0 0 0 1px transparent inset, none;
