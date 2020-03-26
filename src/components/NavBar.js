@@ -19,10 +19,7 @@ render(){
       <NavLink to="/profile" className="navLink">Profile</NavLink>
     </li>
     <li>
-      <NavLink to="/findpitch" className="navLink">Find Your Pitch</NavLink>
-    </li>
-    <li>
-      <NavLink to="/piano" className="navLink">Piano</NavLink>
+      <NavLink to="/findpitch" className="navLink">Find Your Song</NavLink>
     </li>
   </ul>
   </div>

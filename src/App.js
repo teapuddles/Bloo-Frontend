@@ -6,7 +6,8 @@ import ProfileContainer from './components/ProfileContainer.js'
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
 import 'react-piano/dist/styles.css';
-import PianoHelper from './PianoComponents/PianoHelper.js'
+import './semantic/dist/semantic.css';
+// import PianoHelper from './PianoComponents/PianoHelper.js'
 import KeyComponent from './KeyComponents/KeyComponent.js'
 
 import {withRouter} from 'react-router-dom';
@@ -48,6 +49,7 @@ componentDidMount() {
 
 handleResponse = (response) => {
   if (response.user) {
+      console.log(response.user)
       localStorage.username = response.user.username
       localStorage.token = response.token
       this.setState(response, () => {
@@ -64,13 +66,22 @@ handleResponse = (response) => {
 }
 
 addSongToList = newSong => {
-  console.log(newSong)
-  this.setState({
+  // fetch(`http://localhost:3000/users/${this.user.id}`, {
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/json"
+  //   },
+  //   body: JSON.stringify(newSong)
+  // })
+  // .then(r => r.json())
+  // .then(newSong => 
+this.setState({
     user: {
       songList: [...this.state.user.songList, newSong]
     }
   })
 }
+
 
 deleteSong = (songId) => {
   const removedSong = this.state.user.songList.findIndex(song => song === songId)
@@ -91,7 +102,7 @@ render(){
       <Route path="/login" render={() => <LoginForm handleCurrentUser={this.handleCurrentUser} />} />
       <Route path="/register" render={() => <RegisterForm handleCurrentUser={this.handleCurrentUser} />} />
       <Route path="/profile" render={() => <ProfileContainer username={localStorage.username} deleteSong={this.deleteSong} songList={this.state.user.songList}/>} />
-      <Route path="/piano" render={() => <PianoHelper username={localStorage.username} pitches={this.state.key}/> }/>
+      {/* <Route path="/piano" render={() => <PianoHelper username={localStorage.username} pitches={this.state.key}/> }/> */}
       <Route path="/findpitch" render={() => <KeyComponent username={localStorage.username} pitches={this.state.key} addSongToList={this.addSongToList}/>} />
       </Switch>
     </div>

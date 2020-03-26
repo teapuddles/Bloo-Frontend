@@ -2,15 +2,25 @@ import React from 'react';
 
 export default class SongList extends React.Component{
   
-  // state = {
-  //   viewLyrics = false
-  // }
+  state = {
+    viewLyrics: false
+  }
 
-  // showLyrics = (e) => {
-  //   this.setState({
-  //     viewLyrics = !this.state.viewLyrics
-  //   })
-  // }
+  showLyrics = () => {
+    console.log(this.props.song)
+    return(
+      <div>
+        <br/>
+      {this.props.song.lyrics}
+      </div>
+    )
+  }
+
+  handleClick = () => {
+    this.setState({
+      viewLyrics: !this.state.viewLyrics
+    })
+  }
 
   onDeleteSong = () => {
     console.log(this.props.song, "hi")
@@ -23,7 +33,8 @@ export default class SongList extends React.Component{
       <div>
         {this.props.song.artist} -
         {this.props.song.title}
-        {/* <button onClick={this.state.viewLyrics ? this.showLyrics : null}>Lyrics</button> */}
+        {this.state.viewLyrics ? this.showLyrics(this.props.song) : null}
+        <button onClick={this.handleClick}>Lyrics</button>
         <button onClick={this.onDeleteSong}>Remove Song</button>
       </div>
     )

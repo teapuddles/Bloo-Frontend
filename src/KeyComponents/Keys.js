@@ -33,8 +33,10 @@ state = {
     return(
       <div>
         {this.state.showSong ? this.handleKeyInfo(this.state.keyInfo) : null} 
+        <div class="card-containr">
          <div className="card" onClick={this.handleClick}>
           {this.props.pitch.pitch}
+         </div>
          </div>
       </div>
     )

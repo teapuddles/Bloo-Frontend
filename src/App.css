@@ -1,38 +1,80 @@
 .App {
   text-align: center;
+  font-family: 'Fugaz One', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  color:#1e70bf;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Fugaz One', cursive;
+  font-size: xx-large;
 }
+
+.nav {
+  display: flex;
+  margin: 20px;
+  background: black;
+  font-weight: normal;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
+  text-align: center;
+  font-family: 'Fugaz One', cursive;
+  font-size: large;
+  font-color: #FFFFF;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navLink {
+  display: flex;
+  margin-left: 130px;
+  margin-right: 110px;
+}
+
+.song-div {
+  font-size: large;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 2px solid;
+  margin-right: 5px;
+
+}
+
+.pitchdiv{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ padding-top: 25px;
+ flex-wrap: nowrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: x-large;
+  padding: 15px;
+  border: 4px dashed;
+  text-align: left;
+}
+
+a.navLink {
+  text-decoration: none;
+}
+

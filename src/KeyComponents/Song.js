@@ -3,7 +3,8 @@ export default class Song extends React.Component{
 
 
   handleClick = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
+    // if(localStorage.username)
     console.log(this.props)
     this.props.addSongToList(this.props.song)
   }
@@ -14,7 +15,7 @@ export default class Song extends React.Component{
       <div className="song-div">
       {this.props.song.title} -
       {this.props.song.artist} - 
-      <button onClick={this.handleClick}>  Add me to your list  </button>
+      <button type="submit" onClick={this.handleClick}>  Add me to your list  </button>
       </div>
     )
   }
