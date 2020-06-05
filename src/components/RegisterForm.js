@@ -21,7 +21,7 @@ handleChange = (e) => {
 
 handleRegisterSubmit = (newUser) => {
     newUser.preventDefault()
-    fetch(`http://localhost:3000/users`, {
+    fetch(`https://ancient-mesa-98163.herokuapp.com/users`, {
         method: "POST",
         headers: {
             "content-type": "application/json"

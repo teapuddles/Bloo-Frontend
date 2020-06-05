@@ -13,7 +13,7 @@ state = {
 }
 
   handleClick = () => {
-    fetch(`http://localhost:3000/keys/${this.props.pitch.id}`)
+    fetch(`https://ancient-mesa-98163.herokuapp.com/keys/${this.props.pitch.id}`)
     .then(r => r.json())
     .then(keyInfoResp => this.setState({
       keyInfo: keyInfoResp,

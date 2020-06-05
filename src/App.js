@@ -29,7 +29,7 @@ state = {
 componentDidMount() {
   if (localStorage.getItem("token")) {
 
-    fetch(`http://localhost:3000/persist`, {
+    fetch(`https://ancient-mesa-98163.herokuapp.com/persist`, {
       headers: {
         "Authorization": `Bearer ${localStorage.token}`
       }
@@ -37,7 +37,7 @@ componentDidMount() {
       .then(r => r.json())
       .then(this.handleResp)
   }
-  fetch(`http://localhost:3000/keys`)
+  fetch(`https://ancient-mesa-98163.herokuapp.com/keys`)
   .then(r => r.json())
   .then(pitches => this.setState({
     key: {

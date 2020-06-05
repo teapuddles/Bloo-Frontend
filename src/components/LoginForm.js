@@ -21,7 +21,7 @@ handleChange = (e) => {
 
 handleLoginSubmit = (logUser) => {
     logUser.preventDefault()
-    fetch(`http://localhost:3000/login`, {
+    fetch(`https://ancient-mesa-98163.herokuapp.com/login`, {
         method: "POST",
         headers: {
             "content-type": "application/json"
