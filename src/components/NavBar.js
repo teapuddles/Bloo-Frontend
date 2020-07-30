@@ -21,6 +21,9 @@ render(){
     <li>
       <NavLink to="/findpitch" className="navLink">Find Your Song</NavLink>
     </li>
+    <li>
+      <NavLink to="/findplace" className="navLink">Find Your Spot</NavLink>
+    </li>
   </ul>
   </div>
   )
