@@ -7,7 +7,7 @@ import './App.css';
 import {Switch, Route} from 'react-router-dom';
 import 'react-piano/dist/styles.css';
 import './semantic/dist/semantic.css';
-import MapComponent from './components/MapComponent.js';
+import MapContainer from './components/MapContainer.js';
 // import PianoHelper from './PianoComponents/PianoHelper.js'
 import KeyComponent from './KeyComponents/KeyComponent.js'
 
@@ -105,7 +105,7 @@ render(){
       <Route path="/profile" render={() => <ProfileContainer username={localStorage.username} deleteSong={this.deleteSong} songList={this.state.user.songList}/>} />
       {/* <Route path="/piano" render={() => <PianoHelper username={localStorage.username} pitches={this.state.key}/> }/> */}
       <Route path="/findpitch" render={() => <KeyComponent username={localStorage.username} pitches={this.state.key} addSongToList={this.addSongToList}/>} />
-      <Route path="/findplace" render={() => <MapComponent/>}/>
+      <Route path="/findplace" render={() => <MapContainer/>}/>
       </Switch>
     </div>
   );
