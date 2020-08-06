@@ -7,6 +7,7 @@ import './App.css';
 import {Switch, Route} from 'react-router-dom';
 import 'react-piano/dist/styles.css';
 import './semantic/dist/semantic.css';
+import MapComponent from './components/MapComponent.js';
 // import PianoHelper from './PianoComponents/PianoHelper.js'
 import KeyComponent from './KeyComponents/KeyComponent.js'
 
