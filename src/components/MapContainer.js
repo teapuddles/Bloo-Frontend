@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import {Map, GoogleApiWrapper} from 'google-maps-react';
 
 const mapStyles = {
-    width: '100%',
-    height: '100%'
+    width: '50%',
+    height: '50%'
   };
 
 export class MapContainer extends Component {
     render(){
         return(
-          <Map
+          <Map classname="map"
           google={this.props.google}
-          zoom={7}
+          zoom={12}
           style={mapStyles}
         //initialCenter={{}}
         // probably will need to add 
@@ -21,6 +21,6 @@ export class MapContainer extends Component {
     }
 }
 export default GoogleApiWrapper({
-    apiKey: (AIzaSyCW3gPOgEsTPSgkenTVi7_ZPq9eHrkcR_E)
+    apiKey: 'AIzaSyCW3gPOgEsTPSgkenTVi7_ZPq9eHrkcR_E'
   })(MapContainer)
   
