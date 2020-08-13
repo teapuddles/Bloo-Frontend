@@ -22,4 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Maps API Key AIzaSyCW3gPOgEsTPSgkenTVi7_ZPq9eHrkcR_E
+# API Key 
+.env
