@@ -24,7 +24,8 @@ state = {
   key: {
     allkeys: []
   },
-  token: ""
+  token: "",
+  location: ""
 }
 
 componentDidMount() {
