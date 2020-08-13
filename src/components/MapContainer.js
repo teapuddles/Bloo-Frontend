@@ -9,11 +9,11 @@ const mapStyles = {
 export class MapContainer extends Component {
     render(){
         return(
-          <Map classname="map"
+          <Map classname="map"  
           google={this.props.google}
           zoom={12}
           style={mapStyles}
-        //initialCenter={{}}
+          initialCenter={this.setLocation}
         // probably will need to add 
         // geolocation here for inital center
           />
@@ -21,6 +21,6 @@ export class MapContainer extends Component {
     }
 }
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyCW3gPOgEsTPSgkenTVi7_ZPq9eHrkcR_E'
+    apiKey: process.env.REACT_APP_GOOGLE_API_KEY
   })(MapContainer)
   

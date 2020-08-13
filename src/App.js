@@ -94,6 +94,27 @@ deleteSong = (songId) => {
   })
 }
 
+// maps functions
+setLocation = () => {
+  let map 
+  let infoWindow 
+  let currentPos = navigator.geolocation
+  if (currentPos) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Location found.');
+      infoWindow.open(map);
+      map.setCenter(pos);
+    });
+  }
+}
+
+
 render(){
   // console.log(this.state.key)
   return (
@@ -105,7 +126,7 @@ render(){
       <Route path="/profile" render={() => <ProfileContainer username={localStorage.username} deleteSong={this.deleteSong} songList={this.state.user.songList}/>} />
       {/* <Route path="/piano" render={() => <PianoHelper username={localStorage.username} pitches={this.state.key}/> }/> */}
       <Route path="/findpitch" render={() => <KeyComponent username={localStorage.username} pitches={this.state.key} addSongToList={this.addSongToList}/>} />
-      <Route path="/findplace" render={() => <MapContainer/>}/>
+      <Route path="/findplace" render={() => <MapContainer start={this.setLocation}/>}/>
       </Switch>
     </div>
   );
