@@ -95,6 +95,24 @@ deleteSong = (songId) => {
 }
 
 // maps functions
+setLocation = () => {	
+  let map 	
+  let infoWindow 	
+  let currentPos = navigator.geolocation	
+  if (currentPos) {	
+    navigator.geolocation.getCurrentPosition(function(position) {	
+      var pos = {	
+        lat: position.coords.latitude,	
+        lng: position.coords.longitude	
+      };	
+
+      infoWindow.setPosition(pos);	
+      infoWindow.setContent('Location found.');	
+      infoWindow.open(map);	
+      map.setCenter(pos);	
+    });	
+  }	
+}	
 
 
 
