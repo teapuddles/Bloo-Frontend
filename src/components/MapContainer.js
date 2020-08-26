@@ -10,8 +10,8 @@ class MapContainer extends React.Component {
   constructor(props){
   super(props)
   this.state = {
-    latitude: '',
-    longitude: ''
+    latitude: "",
+    longitude: ""
   };
   this.getLocation = this.getLocation.bind(this)
   this.getCoords = this.getCoords.bind(this)
@@ -42,7 +42,7 @@ class MapContainer extends React.Component {
           google={this.props.google}
           zoom={12}
           style={mapStyles}
-          initialCenter={this.props.setLocation}
+          initialCenter={this.props.getLocation}
         // probably will need to add 
         // geolocation here for inital center
           />
