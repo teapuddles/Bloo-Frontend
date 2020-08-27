@@ -7,15 +7,37 @@ const mapStyles = {
   };
 
 class MapContainer extends React.Component {
+
   constructor(props){
   super(props)
   this.state = {
-    latitude: "",
-    longitude: ""
+    currentLocation: {
+      latitude: '',
+      longitude: ''
+    }
   };
   this.getLocation = this.getLocation.bind(this)
   this.getCoords = this.getCoords.bind(this)
   }
+
+
+  // getLocation = () => {
+  //   if (navigator.geolocation) {
+  //     console.log(navigator.geolocation)
+  //     navigator.geolocation.getCurrentPosition((position) => {
+  //       let coords = position.coords
+  //       console.log(coords)
+  //       this.setState=({
+  //         currentLocation: {
+  //           latitude: coords.latitude,
+  //           longitude: coords.longitude
+  //         }
+  //       })
+  //     });
+  //   } else {
+  //     alert("Geolocation is not supported by this browser.");
+  //   }
+  // }
 
   getLocation = () => {
     if (navigator.geolocation) {
@@ -27,11 +49,13 @@ class MapContainer extends React.Component {
   }
 
   getCoords = (position) => {
-    console.log(position)
+    console.log(position.coords)
     this.setState = ({
        latitude: position.coords.latitude,
        longitude: position.coords.longitude
     })
+    console.log(this.state)
+    return this.state
   }
 
     render(){
@@ -40,9 +64,10 @@ class MapContainer extends React.Component {
           <button onClick={this.getLocation}>Find My Spot</button>
           <Map className="map"  
           google={this.props.google}
+          props={this.props}
           zoom={12}
           style={mapStyles}
-          initialCenter={this.props.getLocation}
+          initialCenter={this.props.currentLocation}
         // probably will need to add 
         // geolocation here for inital center
           />
