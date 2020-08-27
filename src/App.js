@@ -98,7 +98,8 @@ deleteSong = (songId) => {
 setLocation = () => {	
   let map 	
   let infoWindow 	
-  let currentPos = navigator.geolocation	
+  let currentPos = navigator.geolocation
+  console.log(currentPos)	
   if (currentPos) {	
     navigator.geolocation.getCurrentPosition(function(position) {	
       var pos = {	
@@ -127,7 +128,7 @@ render(){
       <Route path="/profile" render={() => <ProfileContainer username={localStorage.username} deleteSong={this.deleteSong} songList={this.state.user.songList}/>} />
       {/* <Route path="/piano" render={() => <PianoHelper username={localStorage.username} pitches={this.state.key}/> }/> */}
       <Route path="/findpitch" render={() => <KeyComponent username={localStorage.username} pitches={this.state.key} addSongToList={this.addSongToList}/>} />
-      <Route path="/findplace" render={() => <MapContainer start={this.setLocation}/>}/>
+      <Route path="/findplace" render={() => <MapContainer/>}/>
       </Switch>
     </div>
   );
