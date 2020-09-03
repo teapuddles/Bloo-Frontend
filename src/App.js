@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginForm from './components/LoginForm.js';
+import LoginFormNew from './components/LoginFormNew.js';
 import RegisterForm from './components/RegisterForm.js'
 import NavBar from './components/NavBar.js';
 import ProfileContainer from './components/ProfileContainer.js'
@@ -123,7 +124,8 @@ render(){
     <div className="App">
       <NavBar/>
       <Switch>
-      <Route path="/login" render={() => <LoginForm handleCurrentUser={this.handleCurrentUser} />} />
+      {/* <Route path="/login" render={() => <LoginForm handleCurrentUser={this.handleCurrentUser} />} /> */}
+      <Route path="/login" render={() => <LoginFormNew handleCurrentUser={this.handleCurrentUser} />} />
       <Route path="/register" render={() => <RegisterForm handleCurrentUser={this.handleCurrentUser} />} />
       <Route path="/profile" render={() => <ProfileContainer username={localStorage.username} deleteSong={this.deleteSong} songList={this.state.user.songList}/>} />
       {/* <Route path="/piano" render={() => <PianoHelper username={localStorage.username} pitches={this.state.key}/> }/> */}
