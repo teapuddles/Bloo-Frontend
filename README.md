@@ -1,8 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Links: Backend: https://github.com/teapuddles/Bloo-Backend
-       Demo: https://www.youtube.com/watch?v=gxmH1qumUPo&
-       Hosted Site (Heroku): https://bloo-karaoke.herokuapp.com/
+Links: 
+     - Backend: https://github.com/teapuddles/Bloo-Backend
+     - Demo: https://www.youtube.com/watch?v=gxmH1qumUPo&
+     - Hosted Site (Heroku): https://bloo-karaoke.herokuapp.com/
        
 Hello! and welcome to Bloo Karaoke. Bloo Karaoke is a webapp designed to help users find songs that they could sing at karaoke using a music education technique by Edwin Gordon called "Music Learning Theory". 
 
