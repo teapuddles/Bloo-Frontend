@@ -22,3 +22,4 @@ Future Features/WIP Implimentations:
     google-maps-react api. 
   - Overhaul entire project to use React-Hooks
   - Overhaul entire project to use React-Redux
+  - Overhaul CSS to remove semantic UI in favor of fully custom CSS
