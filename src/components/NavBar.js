@@ -1,11 +1,8 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
 
-export default class Form extends React.Component{
-
-
-render(){
-  return(
+const Form = () => {
+  return (
     <div className="title">
     Bloo Karaoke
   <ul className="nav">
@@ -28,4 +25,5 @@ render(){
   </div>
   )
 }
-}
+
+export default Form 
