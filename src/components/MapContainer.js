@@ -8,12 +8,16 @@ const mapStyles = {
 
 class MapContainer extends React.Component {
 
+  // chang this to functional component that takes in props, then move
+  // the action of getLocation upwards and the props of our latitude and longitude downwards
+  // the end is nigh
+
   constructor(props){
   super(props)
   this.state = {
     currentLocation: {
-      latitude: '',
-      longitude: ''
+      latitude: null,
+      longitude: null
     }
   };
   this.getLocation = this.getLocation.bind(this)
@@ -49,13 +53,15 @@ class MapContainer extends React.Component {
   }
 
   getCoords = (position) => {
-    console.log(position.coords)
+    console.log(position)
+    let newCenter = position.coords
     this.setState = ({
-       latitude: position.coords.latitude,
-       longitude: position.coords.longitude
+      currentLocation: {
+        latitude: newCenter.latitude,
+        longitude: newCenter.longitude
+      }
     })
     console.log(this.state)
-    return this.state
   }
 
     render(){
@@ -64,7 +70,6 @@ class MapContainer extends React.Component {
           <button onClick={this.getLocation}>Find My Spot</button>
           <Map className="map"  
           google={this.props.google}
-          props={this.props}
           zoom={12}
           style={mapStyles}
           initialCenter={this.props.currentLocation}
