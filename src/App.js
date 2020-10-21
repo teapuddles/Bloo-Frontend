@@ -6,9 +6,7 @@ import ProfileContainer from './components/ProfileContainer.js'
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
 import 'react-piano/dist/styles.css';
-import './semantic/dist/semantic.css';
 import MapContainer from './components/MapContainer.js';
-// import PianoHelper from './PianoComponents/PianoHelper.js'
 import KeyComponent from './KeyComponents/KeyComponent.js'
 
 import {withRouter} from 'react-router-dom';

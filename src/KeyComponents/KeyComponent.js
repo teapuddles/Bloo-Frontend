@@ -1,6 +1,5 @@
 import React from 'react';
 import Keys from './Keys.js'
-import 'react-piano/dist/styles.css';
 import PianoHelper from '../PianoComponents/PianoHelper.js'
 
 
@@ -12,13 +11,13 @@ export default class KeyComponent extends React.Component {
     console.log(this.props)
     return(
       <div>
-        <h3 classname="instruction1">
+        <h3>
         1. Say Bloo: 
         <br/>
         In your speaking voice, say and hold the word Bloo. Then find what pitch on the piano is closest. It doesn't matter if you're a little bit off, because the base notes will be very close together. 
         </h3>
         <PianoHelper username={localStorage.username}/>
-        <h3 classname="instruction2">
+        <h3>
           2. Click a Pitch: 
           <br/>
           Now, take the pitch that was closest to what you found in Step 1 and click it.

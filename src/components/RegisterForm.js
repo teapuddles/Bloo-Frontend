@@ -56,7 +56,7 @@ render() {
     let { username, password } = this.state
 
     return (
-        <div className="container">
+        <div>
         <form onSubmit={this.handleRegisterSubmit} >
           <h1>Register</h1>
           <label htmlFor="username">Username:</label>

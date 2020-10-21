@@ -7,7 +7,7 @@ export default class Profile extends React.Component {
   render() {
     console.log(this.props)
     return (
-      <div className="container">
+      <div>
         <h1>Hello, {this.props.username}!</h1>
         <h2> Your Song List: </h2>
         {this.props.songList.map(song => {
