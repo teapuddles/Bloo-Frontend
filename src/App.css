@@ -1,7 +1,15 @@
 .App {
   text-align: center;
   font-family: 'Fugaz One', cursive;
+}
+
+body {
   background-color: #30AEC5;
+  color:#000;
+}
+
+.App-link {
+  color: #61dafb;
 }
 
 .title {
@@ -17,6 +25,7 @@
 
 .nav {
   display: flex;
+  justify-content: space-evenly;
   margin: 20px;
   background: black;
   font-weight: normal;
@@ -37,7 +46,7 @@ ul {
   display: flex;
   margin-left: 130px;
   margin-right: 110px;
-  color: #FFFFF
+  color: white
 }
 
 .song-div {
