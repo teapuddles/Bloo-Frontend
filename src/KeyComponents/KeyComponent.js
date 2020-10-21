@@ -1,6 +1,5 @@
 import React from 'react';
 import Keys from './Keys.js'
-import 'react-piano/dist/styles.css';
 import PianoHelper from '../PianoComponents/PianoHelper.js'
 
 
