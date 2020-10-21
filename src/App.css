@@ -4,7 +4,8 @@
 }
 
 body {
-  color:#1e70bf;
+  background-color: #30AEC5;
+  color:#000;
 }
 
 .App-link {
@@ -18,8 +19,13 @@ body {
   font-size: xx-large;
 }
 
+.container {
+  font-size: large
+}
+
 .nav {
   display: flex;
+  justify-content: space-evenly;
   margin: 20px;
   background: black;
   font-weight: normal;
@@ -29,7 +35,6 @@ body {
   text-align: center;
   font-family: 'Fugaz One', cursive;
   font-size: large;
-  font-color: #FFFFF;
   padding: 20px;
 }
 
@@ -41,6 +46,7 @@ ul {
   display: flex;
   margin-left: 130px;
   margin-right: 110px;
+  color: white
 }
 
 .song-div {
