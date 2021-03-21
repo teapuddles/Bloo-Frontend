@@ -17,7 +17,7 @@ Back-End technologies used:
   - RESTFUL Routes
   - JWT Auth
   
-Future Features/WIP Implimentations:
+Future Features/WIP Implementations:
   - Include a "Find my Spot" feature that will take a users location with the geolocation api and show a certain amount of Karaoke places nearby using 
     google-maps-react api. 
   - Overhaul entire project to use React-Hooks
